@@ -37,11 +37,9 @@ public class MailService implements MailSender {
             messageHelper.setSubject("Confirm your email");
             messageHelper.setFrom("rdvndgn4235@gmail.com");
             mailSender.send(mimeMessage);
-
         } catch (MessagingException ex) {
             LOGGER.error("failed to send mail", ex);
             throw new IllegalStateException("failed to send mail.");
         }
-
     }
 }
